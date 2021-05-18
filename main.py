@@ -1,10 +1,19 @@
-def solution(nums,target):
-	#如果列表长度小于2，则直接结束
-    if len(nums) < 2:
-        return
-        #两次循环列表，分别对列表中的所有可能的数字进行相加
-        for i in range(0, len(nums) - 1):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
+for i in range(1, 10):
+    for j in range(1, i+1):
+        n = j * i
+        # 1*1  1*1,2   1*1,2,3
+        # print('{}*{}={}'.format(i,j,i*j), end='\t')
+        # print("%d * %d = %d" %i,j,i*j)
+        # print("i*j",end=/t)
+        # print(str(i)+"*"+str(j)+'='+str(n)+'\t', end="")
+        print(str(j), '*', str(i), '=', str(n), '\t', end="")
+    print()
+
+
+for i in range(1,10):
+    for j in range(1,i+1):
+        n = i * j
+        print(str(i)+"*"+str(j)+"="+str(n)+"\t",end='')
+    print()
+
 
