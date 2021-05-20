@@ -45,4 +45,4 @@ nums=[1,2,3,6,8,9]
 target=9
 a=Solution()
 out=a.towSum(nums,target)
-print(out)
+print(out )
