@@ -27,14 +27,27 @@
 #     return(test)
 # bubble(test)
 # print(test)
+
+# import random
+# test = []
+# for i in range(100):
+#     test.append(random.randint(0,1000))
+# def order(test):
+#     for k in range(0,len(test)-1):
+#         for j in range(0,len(test)-1):
+#             if test[j] > test[j+1]:
+#                 test[j],test[j+1] = test[j+1],test[j]
+#     print(test)
+# order(test)#
+
 import random
 test = []
 for i in range(100):
     test.append(random.randint(0,1000))
 def order(test):
-    for k in range(0,len(test)-1):
-        for j in range(0,len(test)-1):
+    for k in range(len(test)-1):
+        for j in range(len(test)-1-k):
             if test[j] > test[j+1]:
-                test[j],test[j+1] = test[j+1],test[j]
+                test[j],test[j+1]=test[j+1],test[j]
     print(test)
-order(test)#
+order(test)
