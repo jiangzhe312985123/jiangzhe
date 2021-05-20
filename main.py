@@ -35,3 +35,14 @@ a=Solution()
 out=a.twoSum(nums,target)
 print(out)
 
+class Solution:
+    def towSum(self,nums,target):
+        for i in range(len(nums)-1):
+            for j in range(i+1,len(nums)):
+                if nums[i]+nums[j]==target:
+                    return[i,j]
+nums=[1,2,3,6,8,9]
+target=9
+a=Solution()
+out=a.towSum(nums,target)
+print(out)
