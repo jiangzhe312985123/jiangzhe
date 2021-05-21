@@ -45,9 +45,13 @@ test = []
 for i in range(100):
     test.append(random.randint(0,1000))
 def order(test):
-    for k in range(len(test)-1):
+    for k in range(len(test)-1):    #-1是因为最后一次不用比了，已经出结果了,设定一个变量为False，如果元素之间交换了位置，将变量重新赋值为True,最后再判断，在一次循环结束后，变量如果还是为False，则brak退出循环，结束排序。
+        flag = False
         for j in range(len(test)-1-k):
             if test[j] > test[j+1]:
                 test[j],test[j+1]=test[j+1],test[j]
+                flag = True
+        if not flag:
+            break
     print(test)
 order(test)
