@@ -1,12 +1,48 @@
+# class Solution:
+#     def twoSum(self,nums,target):
+#         for i in range(len(nums)-1):
+#             for j in range(i+1,len(nums)):
+#                 if nums[i]+nums[j] == target:
+#                     return[i,j]
+# nums = [2, 7, 11, 15]
+# nums = [3, 2, 3, 4, 11, 7, 4]
+# target = 9
+# a = Solution()
+# out = a.twoSum(nums,target)
+# print('结果：',out)
 class Solution:
     def towSum(self,nums,target):
-        dict = {}
-        for i, j in enumerate(nums):#i是下标index，j是里面数字item
-            if target - nums[i] in dict:#从第一个开始找，如果在表中找到了，就输出结果，如果没有在哈希表中找到，就存入哈希表中、
-                return i, dict[target - nums[i]]#dict[target - nums[i]]是下标
-            dict[j] = i #代表着哈希表（新建的字典）输出结果是对应的下标值，也就是2=0,3=1,
-nums = [2,3,6,8,9]
+        for i in range(len(nums)-1):
+            for j in range(i+1,len(nums)):
+                if nums[i] + nums[j] == target:
+                    return[i,j]
+nums = [2,3,6,7,8,9]
 target = 9
 a = Solution()
 out = a.towSum(nums,target)
 print("数组:",nums,"目标:",target,"结果:",out)
+
+
+class Solution:
+    def twoSum(self,nums,target):
+        for i in range(len(nums)-1):
+            for j in range(i+1,len(nums)):
+                if nums[i]+nums[j]==target:
+                    return[i,j]
+nums=[1,0]
+target=1
+a=Solution()
+out=a.twoSum(nums,target)
+print(out)
+
+class Solution:
+    def towSum(self,nums,target):
+        for i in range(len(nums)-1):
+            for j in range(i+1,len(nums)):
+                if nums[i]+nums[j]==target:
+                    return[i,j]
+nums=[1,2,3,6,8,9]
+target=9
+a=Solution()
+out=a.towSum(nums,target)
+print(out )
